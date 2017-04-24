@@ -21,7 +21,7 @@
 
 ## users_groups table
 |Column  |Type   |  Options  |
-|:------ |:-- ---|:----------|
+|:-------|:------|:----------|
 |user_id |integer|           |
 |group_id|integer|           |
 
