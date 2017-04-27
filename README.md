@@ -1,10 +1,10 @@
 # DB設計
 ## users table(created by 'devise')
-| Column  | Type  |  Options  |
-|:--------|:------|:----------|
-|user_name|integer|null: false|
-|email    |string |null: false|
-|password |string |null: false|
+| Column  | Type  |  Options                |
+|:--------|:------|:------------------------|
+|name     |string |null: false, unique: true|
+|email    |string |null: false              |
+|password |string |null: false              |
 
 ### Association
 - has_many :groups, though: :users_groups
