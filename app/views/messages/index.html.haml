@@ -1,0 +1,46 @@
+.flash-message
+.left
+  .left__user
+    .left__user__contents
+      .left__user__contents--user-name
+        kaisei
+      %a.left__user__contents--new-group
+        %i.fa.fa-pencil-square-o
+      %a.left__user__contents--edit-user
+        %i.fa.fa-cog
+  .left__groups
+    .left__groups__list
+      .left__groups__list__group
+        .left__groups__list__group--name
+          test_name
+        .left__groups__list__group--message
+          test_message
+
+.right
+  .right__header
+    .right__header__group
+      .right__header__group--name
+        test_group
+      %a.right__header__group--edit-button
+        Edit
+    .right__header__users
+      kaisei
+  .right__body
+    .right__body__messages__list
+      .right__body__messages__list__message
+        .right__body__messages__list__message--name
+          kaisei
+        .right__body__messages__list__message--time
+          1996/10/1
+        .right__body__messages__list__message--body
+          test_message
+  .right__footer
+    .right__footer__form
+      .right__footer__form--body
+        .right__footer__form--body--body
+          .right__footer__form--body--body-text
+            Type a message
+          .right__footer__form--body--body-file
+            %i.fa.fa-picture-o
+        .right__footer__form--body-send
+          Send
