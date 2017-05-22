@@ -1,21 +1,6 @@
 .flash-message
-.left
-  .left__user
-    .left__user__contents
-      .left__user__contents--user-name
-        kaisei
-      %a.left__user__contents--new-group
-        %i.fa.fa-pencil-square-o
-      %a.left__user__contents--edit-user
-        %i.fa.fa-cog
-  .left__groups
-    .left__groups__list
-      .left__groups__list__group
-        .left__groups__list__group--name
-          test_name
-        .left__groups__list__group--message
-          test_message
 
+= render 'sidebar'
 .right
   .right__header
     .right__header__group
@@ -40,7 +25,7 @@
         .right__footer__form--body--body
           .right__footer__form--body--body-text
             Type a message
-          .right__footer__form--body--body-file
+          %a.right__footer__form--body--body-file
             %i.fa.fa-picture-o
         .right__footer__form--body-send
           Send

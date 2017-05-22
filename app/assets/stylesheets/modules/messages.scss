@@ -5,9 +5,9 @@
   &__user{
    height: 15%;
    width: 100%;
-   background-color: $dark_blue;
+   background-color: #253141;
    &__contents{
-    color: $white;
+    color: #FFFFFF;
     padding: 35px 0 0 0;
     &--user-name{
      font-weight: bold;
@@ -28,11 +28,11 @@
   &__groups{
    height: 85%;
    width: 100%;
-   background-color: $naby_blue;
+   background-color: #2f3e51;
    &__list{
     &__group{
     padding: 20px;
-    color: $white;
+    color: #FFFFFF;
      &--name{
      font-size: 15px;
      margin-bottom: 5px;
@@ -47,7 +47,7 @@
 
 .right{
   // rightのwidthがcalc(100vw-300px)でできない
-  background-color: white;
+  background-color: #FFFFFF;
   width: calc(100vw - 317px);
   height: 100vh;
   float: left;
@@ -58,16 +58,16 @@
      margin: 0 40px;
       &--name{
        font-size: 20px;
-       color: $darkgray;
+       color: #333333;
        margin: 35px 0 15px;
        float: left;
       }
       &--edit-button{
-       color: $right_blue;
+       color: #38AEF0;
        font-size: 15px;
        float: right;
        padding: 0 20px;
-       border: 1px solid right_blue;
+       border: 1px solid #38AEF0;
        height: 40px;
        line-height: 40px;
        margin-top: 28px;
@@ -75,7 +75,7 @@
     }
     &__users{
      margin: 0 40px;
-     color: $gray;
+     color: gray;
      clear: both;
     }
   }
@@ -112,10 +112,10 @@
       &--body{
         &--body{
           height: 50px;
-          background-color: $white;
+          background-color: #FFFFFF;
           width: calc( 100% - 120px );
           float: left;
-          color: $gray;
+          color: gray;
           margin-top: 22.5px;
           &-text{
             padding: 12px 10px 0;
@@ -131,13 +131,13 @@
         &-send{
           width: 100px;
           height: 50px;
-          background-color: $right_blue;
+          background-color: #38AEF0;
           float: left;
           text-align: center;
           line-height: 50px;
           margin: 0 auto;
           margin-left: 15px;
-          color: white;
+          color: #FFFFFF;
           margin-top: 22.5px;
         }
       }
