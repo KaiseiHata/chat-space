@@ -5,7 +5,7 @@
         kaisei
       %a.left__user__contents--new-group
         %i.fa.fa-pencil-square-o
-      %a.left__user__contents--edit-user
+      = link_to edit_user_path(current_user), class: "left__user__contents--edit-user" do
         %i.fa.fa-cog
   .left__groups
     .left__groups__list
