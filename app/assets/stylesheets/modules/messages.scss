@@ -5,10 +5,13 @@
   &__user{
    height: 15%;
    width: 100%;
-   background-color: #253141;
+   background-color: $dark_blue;
    &__contents{
-    color: #FFFFFF;
+    color: $white;
     padding: 35px 0 0 0;
+    a{
+      color: $white;
+    }
     &--user-name{
      font-weight: bold;
      font-size: 20px;
@@ -28,11 +31,11 @@
   &__groups{
    height: 85%;
    width: 100%;
-   background-color: #2f3e51;
+   background-color: $navy_blue;
    &__list{
     &__group{
     padding: 20px;
-    color: #FFFFFF;
+    color: $white;
      &--name{
      font-size: 15px;
      margin-bottom: 5px;
@@ -47,7 +50,7 @@
 
 .right{
   // rightのwidthがcalc(100vw-300px)でできない
-  background-color: #FFFFFF;
+  background-color: $white;
   width: calc(100vw - 317px);
   height: 100vh;
   float: left;
@@ -58,12 +61,12 @@
      margin: 0 40px;
       &--name{
        font-size: 20px;
-       color: #333333;
+       color: $dark_gray;
        margin: 35px 0 15px;
        float: left;
       }
       &--edit-button{
-       color: #38AEF0;
+       color: $right_blue;
        font-size: 15px;
        float: right;
        padding: 0 20px;
@@ -75,7 +78,7 @@
     }
     &__users{
      margin: 0 40px;
-     color: gray;
+     color: $gray;
      clear: both;
     }
   }
@@ -115,7 +118,7 @@
           background-color: #FFFFFF;
           width: calc( 100% - 120px );
           float: left;
-          color: gray;
+          color: $gray;
           margin-top: 22.5px;
           &-text{
             padding: 12px 10px 0;
@@ -137,7 +140,7 @@
           line-height: 50px;
           margin: 0 auto;
           margin-left: 15px;
-          color: #FFFFFF;
+          color: $white;
           margin-top: 22.5px;
         }
       }
