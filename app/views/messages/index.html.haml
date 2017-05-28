@@ -1,12 +1,10 @@
-.flash-message
-
 = render 'shared/sidebar'
 .right
   .right__header
     .right__header__group
       .right__header__group--name
         test_group
-      %a.right__header__group--edit-button
+      = link_to edit_group_path(id: 1), class: "right__header__group--edit-button" do
         Edit
     .right__header__users
       kaisei

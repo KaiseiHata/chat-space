@@ -3,7 +3,7 @@
     .left__user__contents
       .left__user__contents--user-name
         kaisei
-      %a.left__user__contents--new-group
+      = link_to new_group_path, class: "left__user__contents--new-group" do
         %i.fa.fa-pencil-square-o
       = link_to edit_user_path(current_user), class: "left__user__contents--edit-user" do
         %i.fa.fa-cog
