@@ -1,28 +1,28 @@
 class GroupsController < ApplicationController
 
-def new
-  @group = Group.new
-end
-
-def create
-  @group = Group.create(group_params)
-  if @group.save
-    redirect_to root_path, notice: "チャットグループが作成されました。"
-  else
-    render new_group_path
+  def new
+    @group = Group.new
   end
-end
 
-def edit
+  def create
+    @group = Group.create(group_params)
+    if @group.save
+      redirect_to root_path, notice: "チャットグループが作成されました。"
+    else
+      render new_group_path
+    end
+  end
 
-end
+  def edit
 
-def update
+  end
 
-end
+  def update
 
-private
-def group_params
-  params.require(:group).permit(:name, {user_ids: []})
-end
+  end
+
+  private
+  def group_params
+    params.require(:group).permit(:name, {user_ids: []})
+  end
 end
