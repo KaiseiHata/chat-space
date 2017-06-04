@@ -7,7 +7,7 @@
       = link_to edit_group_path(id: 1), class: "right__header__group--edit-button" do
         Edit
     .right__header__users
-      kaisei
+      = current_user.name
   .right__body
     .right__body__messages__list
       .right__body__messages__list__message
