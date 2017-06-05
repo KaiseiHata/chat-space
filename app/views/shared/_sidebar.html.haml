@@ -8,5 +8,5 @@
       = link_to edit_user_path(current_user), class: "left__user__contents--edit-user" do
         %i.fa.fa-cog
   .left__groups
-    - @groups.each do |group|
+    - groups.each do |group|
       = render partial: "groups/groups", locals: { group: group}
