@@ -2,15 +2,11 @@
   .left__user
     .left__user__contents
       .left__user__contents--user-name
-        kaisei
-      %a.left__user__contents--new-group
+        = current_user.name
+      = link_to new_group_path, class: "left__user__contents--new-group" do
         %i.fa.fa-pencil-square-o
       = link_to edit_user_path(current_user), class: "left__user__contents--edit-user" do
         %i.fa.fa-cog
   .left__groups
-    .left__groups__list
-      .left__groups__list__group
-        .left__groups__list__group--name
-          test_name
-        .left__groups__list__group--message
-          test_message
+    - groups.each do |group|
+      = render partial: "groups/groups", locals: { group: group}
