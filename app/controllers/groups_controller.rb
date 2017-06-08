@@ -1,5 +1,7 @@
 class GroupsController < ApplicationController
 
+  before_action :set_existing_value, only: [:edit, :update]
+
   def index
     @groups = current_user.groups
   end
@@ -19,11 +21,9 @@ class GroupsController < ApplicationController
   end
 
   def edit
-    set_existing_value
   end
 
   def update
-    set_existing_value
     if @group.update(group_params)
       redirect_to root_path(@group), notice: "チャットグループが更新されました。"
     else
