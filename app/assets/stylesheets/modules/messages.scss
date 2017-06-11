@@ -110,38 +110,37 @@
     width: 100%;
     background-color: #B8C3C7;
     &__form{
-      height: 100%;
       margin: 0 40px;
+      position: relative;
       &--body{
-        &--body{
-          height: 50px;
-          background-color: #FFFFFF;
-          width: calc( 100% - 120px );
-          float: left;
-          color: $gray;
-          margin-top: 22.5px;
-          &-text{
-            padding: 12px 10px 0;
-            float: left;
+        position: relative;
+        &-text{
+            padding: 0 10px;
+            margin: 20px 0;
+            height: 50px;
+            line-height: 50px;
+            border: none;
+            width: calc( 100% - 150px );
           }
           &-file{
-            float: right;
-            display: inline-block;
-            line-height: 50px;
-            margin-right: 10px;
+            height: 50px;
+            width: 40px;
+            margin: 32px 130px 20px 0;
+            position: absolute;
+            top: 0;
+            right: 0;
           }
-        }
         &-send{
-          width: 100px;
           height: 50px;
-          background-color: #38AEF0;
-          float: left;
+          width: 100px;
           text-align: center;
-          line-height: 50px;
-          margin: 0 auto;
-          margin-left: 15px;
+          margin: 20px 0;
           color: $white;
-          margin-top: 22.5px;
+          background-color: #38AEF0;
+          position: absolute;
+          top: 0;
+          right: 0;
+          border: none;
         }
       }
     }

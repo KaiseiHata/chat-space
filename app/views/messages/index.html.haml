@@ -18,11 +18,10 @@
         .right__body__messages__list__message--body
           test_message
   .right__footer
-    .right__footer__form
-      = form_for [@group, @message] do |f|
+    = form_for [@group, @message] do |f|
+      .right__footer__form
         .right__footer__form--body
-          .right__footer__form--body--body
-            f.text_area :body, placeholder: "Type a message", class: "right__footer__form--body--body-text"
-            =f.label :image,class: "right__footer__form--body--body-file" do
-              %i.fa.fa-picture-o
-        = f.submit "Send", class: ".right__footer__form--body-send"
+          = f.text_area :body, placeholder: "Type a message", class: "right__footer__form--body-text"
+          = f.label :image,class: "right__footer__form--body-file" do
+            %i.fa.fa-picture-o
+        = f.submit "Send", class: "right__footer__form--body-send"
