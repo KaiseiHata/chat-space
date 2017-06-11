@@ -129,6 +129,13 @@
             position: absolute;
             top: 0;
             right: 0;
+            cursor: pointer;
+            .image{
+              position: absloute;
+              top: 15px;
+              left: 15px;
+              display: none;
+            }
           }
         &-send{
           height: 50px;
@@ -141,6 +148,7 @@
           top: 0;
           right: 0;
           border: none;
+          cursor: pointer;
         }
       }
     }
