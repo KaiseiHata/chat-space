@@ -1,0 +1,28 @@
+= render partial: 'shared/sidebar', locals: { groups: @groups }
+.right
+  .right__header
+    .right__header__group
+      .right__header__group--name
+        test-group
+      = link_to edit_group_path(id: 1), class: "right__header__group--edit-button" do
+        Edit
+    .right__header__users
+      = current_user.name
+  .right__body
+    .right__body__messages__list
+      .right__body__messages__list__message
+        .right__body__messages__list__message--name
+          kaisei
+        .right__body__messages__list__message--time
+          1996/10/1
+        .right__body__messages__list__message--body
+          test_message
+  .right__footer
+    = form_for [@group, @message] do |f|
+      .right__footer__form
+        .right__footer__form--body
+          = f.text_area :body, placeholder: "Type a message", class: "right__footer__form--body-text"
+          = f.label :image,class: "right__footer__form--body-file" do
+            %i.fa.fa-picture-o
+            = f.file_field :image, class: "image"
+        = f.submit "Send", class: "right__footer__form--body-send"
