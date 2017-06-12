@@ -5,9 +5,9 @@ class CreateMessages < ActiveRecord::Migration[5.0]
       t.string :image
       t.integer :user_id
       t.integer :group_id
+      t.references :group, foreign_key: true
+      t.references :user, foreign_key: true
       t.timestamps
     end
-    add_foreign_key :messages, :users, column: :user_id
-    add_foreign_key :messages, :groups, column: :group_id
   end
 end
