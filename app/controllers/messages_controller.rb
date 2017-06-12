@@ -5,8 +5,13 @@ class MessagesController < ApplicationController
   end
 
   def create
-    @message = Message.create(message_params)
-    redirect_to group_messages_path(@message.group_id)
+    @message = Message.new(message_params)
+    if @message.save
+      redirect_to group_messages_path(@message.group_id)
+    else
+      flash.now[:alert] = "メッセージが投稿されませんでした"
+      render :index
+    end
   end
 
   private
