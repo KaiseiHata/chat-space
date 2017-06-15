@@ -79,7 +79,11 @@
     &__users{
      margin: 0 40px;
      color: $gray;
+     font-size: 12px;
      clear: both;
+     span{
+      margin: 0;
+     }
     }
   }
   &__body{
@@ -101,6 +105,7 @@
         &--body{
           font-size: 14px;
           clear: both;
+          margin-bottom: 40px;
         }
       }
     }

@@ -1,6 +1,10 @@
-.left__groups__list
-  .left__groups__list__group
-    .left__groups__list__group--name
-      = group.name
-    .left__groups__list__group--message
-      test_message
+= link_to group_messages_path(group.id) do
+  .left__groups__list
+    .left__groups__list__group
+      .left__groups__list__group--name
+        = group.name
+      .left__groups__list__group--message
+        - if group.messages.last
+          = group.messages.last.body
+        - else
+          まだメッセージはありません。
