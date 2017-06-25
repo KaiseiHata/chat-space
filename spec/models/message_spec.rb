@@ -29,7 +29,6 @@ describe Message do
       it "is invalid without a group_id" do
         message = build(:message, group_id: nil)
         message.valid?
-        binding.pry
         expect(message.errors[:group_id][0]).to include("を入力してください")
       end
 
