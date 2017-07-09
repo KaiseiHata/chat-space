@@ -30,8 +30,7 @@ $(function() {
     })
     .done(function(data){
       var html = buildHTML(data);
-      console.log(html);
-      $('.right__body__messages__list__message').append(html);
+      $('.right__body__messages__list').append(html);
       $('.right__footer').animate({scrollTop: $('right__body__messages__list__message')});
       $('#new_message')[0].reset();
     })
