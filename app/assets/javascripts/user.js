@@ -5,7 +5,6 @@ function appendUser(user) {
                 <p class="chat-group-user__name">${ user.name }</p>
                 <a class="user-search-add chat-group-user__btn chat-group-user__btn--add" data-user-id="${ user.id }" data-user-name="${ user.name }">追加</a>
               </div>`;
-  // debugger;
   return html;
 }
 
@@ -27,7 +26,6 @@ function appendUser(user) {
       data: { keyword: input },
       dataType: 'json'
     })
-
     .done(function(users) {
       var search = "";
         users.forEach(function(user){
@@ -38,7 +36,7 @@ function appendUser(user) {
     })
     .fail(function(){
       alert('ユーザー検索に失敗しました')
-    });click
+    });
   });
 
   $(".chat-group-form").on('click', ".user-search-add", function() {
