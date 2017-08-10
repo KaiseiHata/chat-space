@@ -2,7 +2,10 @@ class MessagesController < ApplicationController
   before_action :set_existing_value, only: [:index, :create]
   def index
     @message = Message.new
-
+    respond_to do |format|
+      format.html
+      format.json
+    end
   end
 
   def create
