@@ -12,8 +12,7 @@
         = @group.users.pluck(:name).join(", ")
   .right__body
     .right__body__messages__list
-      .right__body__messages__list__message
-        = render @messages
+      = render @messages
   .right__footer
     = form_for [@group, @message] do |f|
       .right__footer__form

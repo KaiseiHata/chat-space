@@ -1,6 +1,8 @@
-json.array @messages do |message|
+json.array! @update_message.each do |message|
+  binding.pry
   json.user_name message.user.name
-  json.created_at message.created_at
+  json.date time(message)
   json.body message.body
   json.image message.image
+  json.id message.id
 end
