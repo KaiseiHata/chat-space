@@ -1,8 +1,9 @@
-.right__body__messages__list__message--name
-  = message.user.name
-.right__body__messages__list__message--time
-  = time(message)
-.right__body__messages__list__message--body
-  = message.body
-.right__body__messages__list__message--image
-  = image_tag message.image
+.right__body__messages__list__message{ "data-message-id": "#{ message.id }" }
+  .right__body__messages__list__message--name
+    = message.user.name
+  .right__body__messages__list__message--time
+    = time(message)
+  .right__body__messages__list__message--body
+    = message.body
+  .right__body__messages__list__message--image
+    = image_tag message.image

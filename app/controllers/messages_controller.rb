@@ -2,6 +2,11 @@ class MessagesController < ApplicationController
   before_action :set_existing_value, only: [:index, :create]
   def index
     @message = Message.new
+
+    respond_to do |format|
+      format.html
+      format.json { @update_message = @group.messages.where('id > ?', params[:data_id])}
+    end
   end
 
   def create
@@ -21,7 +26,7 @@ class MessagesController < ApplicationController
   def set_existing_value
     @groups = current_user.groups
     @group = Group.find(params[:group_id])
-    @messages = @group.messages
+    @messages = @group.messages.order(created_at: :ASC).includes(:user)
   end
 
   def message_params
