@@ -49,7 +49,7 @@ $(function() {
   $('#new_message').on('submit', function(e){
     e.preventDefault();
     var formData = new FormData(this);
-    var href = window.location.href
+    var href = window.location.href;
 
     $.ajax({
       url: href,
@@ -73,9 +73,8 @@ $(function() {
 
   var interval = setInterval(function() {
     if (window.location.href.match(/\/groups\/\d+\/messages/)) {
-      var href = window.location.href
+      var href = window.location.href;
       var data = $('.right__body__messages__list__message').last().data('message-id');
-      console.log(data);
   $.ajax({
     url: href,
     data: {
@@ -83,16 +82,13 @@ $(function() {
     },
     dataType: 'json'
   })
-  .done(function(json) {
-    // console.log(json);
-    // console.log(json.messages);
-    json.forEach(function(message) {
-      console.log(message);
+  .done(function(data) {
+    data.forEach(function(message) {
       var insertHTML = buildHTML(message);
       $(".right__body__messages__list").append(insertHTML);
     });
     })
-    .fail(function(json) {
+    .fail(function(data) {
       alert("自動更新に失敗しました");
     })
   } else {
