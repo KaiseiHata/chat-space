@@ -1,5 +1,4 @@
 json.array! @update_message.each do |message|
-  binding.pry
   json.user_name message.user.name
   json.date time(message)
   json.body message.body

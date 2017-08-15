@@ -5,7 +5,6 @@ class MessagesController < ApplicationController
 
     respond_to do |format|
       format.html
-      binding.pry
       format.json { @update_message = @group.messages.where('id > ?', params[:data_id])}
     end
   end

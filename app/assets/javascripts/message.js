@@ -5,7 +5,7 @@ $(function() {
                 <img src="${ message.image }" alt="image">
               </div>`;
 
-    if(message.body && message.image) {
+    if(message.body && message.image.url) {
       var html = `<div class="right__body__messages__list__message" data-message-id='${ message.data }'>
                     <div class="right__body__messages__list__message--name">
                       ${ message.user_name }
@@ -30,7 +30,7 @@ $(function() {
                       ${ message.body }
                     </div>
                   </div>`;
-    } else if (message.image) {
+    } else if (message.image.url) {
       var html = `<div class="right__body__messages__list__message" data-message-id='${ message.data }'>
                     <div class="right__body__messages__list__message--name">
                       ${ message.user_name }
@@ -89,7 +89,7 @@ $(function() {
     json.forEach(function(message) {
       console.log(message);
       var insertHTML = buildHTML(message);
-      $(".right__body__messages__list__message").html(insertHTML);
+      $(".right__body__messages__list").append(insertHTML);
     });
     })
     .fail(function(json) {
