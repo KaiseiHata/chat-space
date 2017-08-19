@@ -2,7 +2,7 @@ $(function() {
 
   function buildHTML(message) {
   var image = `<div class="right__body__messages__list__message--image">
-                <img src="${ message.image }" alt="image">
+                <img src="${ message.image.url }" alt="image">
               </div>`;
 
     if(message.body && message.image.url) {
